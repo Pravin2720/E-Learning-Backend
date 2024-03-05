@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "name": "debug migrate",
+      "program": "${workspaceFolder}/migrate.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "pwa-node",
+      "name": "debug server",
+      "program": "${workspaceFolder}/server.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "docker",
+      "name": "Docker Node.js Launch",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "platform": "node"
+    }
+  ]
+}
